@@ -2,16 +2,21 @@ import Team from './team';
 import Character from './character';
 
 const myTeam = new Team();
-myTeam.add(new Character('111'));
-myTeam.add(new Character('222'));
-myTeam.add(new Character('333'));
-myTeam.add(new Character('111'));
-myTeam.add(new Character('555'));
+
+const hero1 = new Character('Hero-1');
+const hero2 = new Character('Hero-2');
+const hero3 = new Character('Hero-3');
+const hero5 = new Character('Hero-5');
+myTeam.add(hero1);
+myTeam.add(hero2);
+myTeam.add(hero3);
+myTeam.add(hero1);
+myTeam.add(hero5);
 myTeam.toArray();
 console.log(myTeam.members);
 
 // Метож addAll
 const myTeamAll = new Team();
-myTeamAll.addAll(new Character('Hero-1'), new Character('Hero-2'), new Character('Hero-3'), new Character('Hero-1'));
+myTeamAll.addAll(hero1, hero2, hero3, hero1);
 myTeamAll.toArray();
 console.log(myTeamAll.members);

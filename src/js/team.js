@@ -5,11 +5,9 @@ export default class Team {
 
   add(item) {
     try {
-      this.members.forEach((element) => {
-        if (element.name === item.name) {
-          throw new Error(`элемент ${item.name} уже имеется`);
-        }
-      });
+      if (this.members.has(item)) {
+        throw new Error(`элемент ${item.name} уже имеется`);
+      }
       this.members.add(item);
     } catch (element) {
       console.log(element);
@@ -19,11 +17,9 @@ export default class Team {
   addAll(...heroes) {
     for (const arg of heroes) {
       try {
-        this.members.forEach((element) => {
-          if (element.name === arg.name) {
-            throw new Error(`элемент ${arg.name} уже имеется`);
-          }
-        });
+        if (this.members.has(arg)) {
+          throw new Error(`элемент ${item.name} уже имеется`);
+        }
         this.members.add(arg);
       } catch (element) {
         // console.error(element);
