@@ -18,7 +18,7 @@ export default class Team {
     for (const arg of heroes) {
       try {
         if (this.members.has(arg)) {
-          throw new Error(`элемент ${item.name} уже имеется`);
+          throw new Error('');
         }
         this.members.add(arg);
       } catch (element) {
